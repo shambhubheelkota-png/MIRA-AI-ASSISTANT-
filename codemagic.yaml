@@ -3,11 +3,13 @@ workflows:
     name: Android Build
     environment:
       flutter: stable
+      vars:
+        DART_CLI_OPTIONS: "--enable-experiment=dot-shorthands"
     scripts:
       - name: Generate Android files
         script: flutter create . --platforms=android
       - name: Build App
-        script: flutter --enable-experiment=dot-shorthands build apk --release
+        script: flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
       
