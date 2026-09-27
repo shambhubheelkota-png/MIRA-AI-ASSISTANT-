@@ -7,7 +7,7 @@ workflows:
       - name: Generate Android files
         script: flutter create . --platforms=android
       - name: Build App
-        script: flutter build apk --release --dart-define=DART_CLI_OPTIONS=--enable-experiment=dot-shorthands
+        script: flutter --enable-experiment=dot-shorthands build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
       
