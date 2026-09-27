@@ -12,4 +12,3 @@ workflows:
         script: flutter build apk --release --enable-experiment=dot-shorthands
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
-      
