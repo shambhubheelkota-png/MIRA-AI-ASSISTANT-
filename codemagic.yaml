@@ -6,8 +6,6 @@ workflows:
     scripts:
       - name: Generate Android files
         script: flutter create . --platforms=android
-      - name: Get dependencies
-        script: flutter pub get
       - name: Build App
         script: flutter build apk --release --enable-experiment=dot-shorthands
     artifacts:
