@@ -1,16 +1,13 @@
 workflows:
-  android-workflow:
-    name: MIRA Android Workflow
-    instance_type: mac_mini_m1
+  my-workflow:
+    name: Android Build
     environment:
       flutter: stable
     scripts:
-      - name: Install dependencies
-        script: |
-          flutter packages get
+      - name: Get dependencies
+        script: flutter pub get
       - name: Build APK
-        script: |
-          flutter build apk --release
+        script: flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
       
