@@ -1,6 +1,6 @@
 workflows:
-  flutter-workflow:
-    name: MIRA AI Workflow
+  android-workflow:
+    name: MIRA Android Workflow
     instance_type: mac_mini_m1
     environment:
       flutter: stable
